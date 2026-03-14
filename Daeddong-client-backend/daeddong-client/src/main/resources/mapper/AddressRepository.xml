@@ -3,20 +3,20 @@
 <mapper namespace="kr.co.daeddongclient.address.repository.AddressRepository">
 	<select id="getSidoList" parameterType="java.util.HashMap" resultType="kr.co.daeddongclient.address.domain.Address">
 		select SI
-		from 120BPM_TOILET
+		from "TOILET"
 		where
 			si is not null
-			and SI != ""
+			and SI != ''
 		group by SI
 		order by SI asc;
 	</select>
 	<select id="getSiGunguList" parameterType="java.util.HashMap" resultType="kr.co.daeddongclient.address.domain.Address">
 		select GUNGU
-		from 120BPM_TOILET
+		from "TOILET"
 		WHERE
 		    SI=#{sido}
 		  and si is not null
-		  and SI != ""
+		  and SI != ''
 		group by GUNGU
 		order by GUNGU asc;
 	</select>

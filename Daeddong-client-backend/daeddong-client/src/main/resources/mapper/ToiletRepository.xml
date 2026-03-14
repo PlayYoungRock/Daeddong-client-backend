@@ -4,8 +4,8 @@
 	<select id="getToiletList" parameterType="kr.co.daeddongclient.address.domain.AddressCoordinates" resultType="kr.co.daeddongclient.toilet.domain.Toilet">
 		SELECT SEQ,
 		       NAME,
-		       LATITUDE,
-		       LONGITUDE,
+		       CAST(LATITUDE AS DOUBLE PRECISION) AS LATITUDE,
+		       CAST(LONGITUDE AS DOUBLE PRECISION) AS LONGITUDE,
 		       ADDRESS,
 		       SI,
 		       GUNGU,
@@ -29,10 +29,11 @@
 		       REG_ID,
 		       MOD_ID,
 		       OPEN_YN
-		FROM 120BPM_TOILET
+		FROM "TOILET"
 		where
-			LATITUDE between #{latMin} and #{latMax}
-			and LONGITUDE between #{lonMin} and #{lonMax}
+			OPEN_YN = 'Y'
+			and CAST(LATITUDE AS DOUBLE PRECISION) between #{latMin} and #{latMax}
+			and CAST(LONGITUDE AS DOUBLE PRECISION) between #{lonMin} and #{lonMax}
 	</select>
 
 </mapper>

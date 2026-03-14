@@ -38,7 +38,7 @@ dependencies {
 //	implementation 'mysql:mysql-connector-java'
 	implementation group: 'org.mybatis', name: 'mybatis-typehandlers-jsr310', version: '1.0.2'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
-	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.2.0'
+	implementation 'org.postgresql:postgresql'
 	implementation 'org.apache.poi:poi:5.2.3'
 	implementation 'org.apache.poi:poi-ooxml:5.2.3'
 }
