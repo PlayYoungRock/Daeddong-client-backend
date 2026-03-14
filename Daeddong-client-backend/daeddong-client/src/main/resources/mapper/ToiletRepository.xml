@@ -29,7 +29,7 @@
 		       REG_ID,
 		       MOD_ID,
 		       OPEN_YN
-		FROM "TOILET"
+		FROM daeddong."TOILET"
 		where
 			OPEN_YN = 'Y'
 			and CAST(LATITUDE AS DOUBLE PRECISION) between #{latMin} and #{latMax}

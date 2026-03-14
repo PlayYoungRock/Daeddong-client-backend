@@ -3,7 +3,7 @@
 <mapper namespace="kr.co.daeddongclient.address.repository.AddressRepository">
 	<select id="getSidoList" parameterType="java.util.HashMap" resultType="kr.co.daeddongclient.address.domain.Address">
 		select SI
-		from "TOILET"
+		from daeddong."TOILET"
 		where
 			si is not null
 			and SI != ''
@@ -12,7 +12,7 @@
 	</select>
 	<select id="getSiGunguList" parameterType="java.util.HashMap" resultType="kr.co.daeddongclient.address.domain.Address">
 		select GUNGU
-		from "TOILET"
+		from daeddong."TOILET"
 		WHERE
 		    SI=#{sido}
 		  and si is not null
